@@ -1,0 +1,48 @@
+/*default*/
+@import 'mixin';
+@import 'fonts';
+@import 'color';
+@import 'varible';
+@import 'turn';
+/*page*/
+
+
+html {
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+}
+
+body {
+    @include rem(font-size, 1.6rem);
+    font-family: sans-serif;
+    overflow-x: hidden;
+    margin: 0rem;
+}
+
+a {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+button {
+    &:focus {
+        outline: none !important;
+    }
+}
+.invitaion_card {
+    background-color: rgb(249, 203, 223);
+    //position: absolute;
+    //left: 20px;
+    //top: -142px;
+    //width: 824px;
+    //height: 1320px;
+    //z-index: 15;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
