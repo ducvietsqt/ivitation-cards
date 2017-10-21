@@ -66,3 +66,15 @@ img {
     background-color: rgba(222,133,179, 0.9);
     outline: 1px solid slategrey;
 }
+
+.mobile {
+    display: none;
+}
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}

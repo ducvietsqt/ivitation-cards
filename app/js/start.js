@@ -1,14 +1,19 @@
+const PAGE = 2;
+const DISPLAY = {SINGLE:'single', DOUBLE: 'double'}; // todo: ex: 'single','double';
+
 $(window).ready(function () {
-    $('#magazine').turn({
-        display: 'double',
+    let _MOBILE = isMobile.any();
+    let _display = _MOBILE ? DISPLAY.SINGLE : DISPLAY.DOUBLE;
+    let _TURNER = $('#magazine');
+    _TURNER.turn({
+        display: _display,
         acceleration: false,
-        gradients: !$.isTouch,
+        gradients: true,
         elevation: 50,
-        page: 2,
+        page: PAGE,
         autoCenter: true,
         width: $(window).width(),
         height: $(window).height(),
-        // height: 1080,
         turnCorners: 'bl,tr',
         duration: 1000,
         when: {
@@ -17,10 +22,13 @@ $(window).ready(function () {
         }
     });
     $('#heart').bind('click', function (e) {
-        $('#magazine').turn('next');
+        _TURNER.turn('next');
     });
-});
+    window.addEventListener("orientationchange", function() {
+        _TURNER.turn("size", $(window).width(), $(window).height());
+    }, false);
 
+});
 
 
 $(window).bind('keydown', function (e) {
