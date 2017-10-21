@@ -1,17 +1,18 @@
 $(window).ready(function () {
     $('#magazine').turn({
         display: 'double',
-        acceleration: true,
+        acceleration: false,
         gradients: !$.isTouch,
         elevation: 50,
-        page: 1,
+        page: 2,
         autoCenter: true,
         width: $(window).width(),
         height: $(window).height(),
+        // height: 1080,
         turnCorners: 'bl,tr',
+        duration: 1000,
         when: {
             turned: function (e, page) {
-                /*console.log('Current view: ', $(this).turn('view'));*/
             }
         }
     });

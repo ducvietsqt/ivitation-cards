@@ -22,30 +22,34 @@
             <img class="img_mockup" width="300" src="images/w_mk.jpg" alt=""/>
             <div id="heart"></div>
         </div>
-        <div style="background-image:url(images/w_bg_left.jpg);">
+        <div class="second_page" style="background-image:url(images/w_bg_left.jpg);">
             <div class="invitaion_card">
-                <img class="w_logo" src="images/w_logo.png" alt=""/>
-                <img class="w_title" src="images/w_title.png" alt=""/>
+                <img width="400" class="w_logo" src="images/w_logo.png" alt=""/>
                 <div class="card_info">
-                    <div class="left">
-                        <p class="name_latin">Phêrô</p>
-                        <p class="fullname">Hoàng Trung Hiếu</p>
+                    <!--<div class="item left">
+                        <img src="images/_th.png" alt=""/>
                     </div>
-                    <div class="center">
-                        <img src="images/&.png" alt="">
+                    <div class="item center">
+                        <img width="80" src="images/nhatho.png" alt=""/>
                     </div>
-                    <div class="right">
-                        <p class="name_latin">Têxêra</p>
-                        <p class="fullname">Trần Tú Trinh</p>
-                    </div>
+                    <div class="item right">
+                        <img src="images/tt.png" alt=""/>
+                    </div>-->
+                    <img src="images/_title.png" alt=""/>
                 </div>
-                <!--<img class="img_rotate" src="images/w_logo.png" alt=""/>-->
                 <div class="content_invitation">
                     <p>Hôn lễ được cử hành tại:</p>
                     <p class="text-uppercase bold">thánh đường giáo sứ đồng tiến</p>
-                    <p>Vào lúc:</p>
-                    <p>18:30 ngày 10 tháng 11 năm 2017</p>
-                    <p>(nhằm ngày 22 tháng 09 năm Đinh Dậu)</p>
+                    <p>Vào lúc: 18:30 ngày 10 tháng 11 năm 2017</p>
+                    <p class="text-center">
+                        <img src="images/heart.png" alt=""/>
+                    </p>
+                    <p class="doot_botom">Trân trọng kính mời</p>
+                    <div class="info_restaurant">
+                        <p class="_caption">Vui lòng đến dự buổi tiệc rượu chung vui cũng gia đình chúng tôi tại:</p>
+                        <p class="name">Nhà Hàng Minh Thơ 2 (Sảnh B)</p>
+                        <p class="dress">Địa chỉ: <span>307 Thống Nhất - Tân Thiện - Lagi - Bình Thuận</span></p>
+                    </div>
                 </div>
                 <form class="form_content">
                     <div class="row_form">
@@ -53,17 +57,17 @@
                         <div class="checked_content">
                             <div class="item">
                                 <span class="box_check_mark">
-                                    <input type="radio" name="ck_sure" checked/>
+                                    <input type="radio" name="ck_sure" id="ck_sure_1" checked/>
                                     <i>&nbsp;</i>
                                 </span>
-                                <label>Có</label>
+                                <label for="ck_sure_1">Có</label>
                             </div>
                             <div class="item">
                                 <span class="box_check_mark">
-                                    <input type="radio" name="ck_sure"/>
+                                    <input type="radio" name="ck_sure" id="ck_sure_2"/>
                                     <i>&nbsp;</i>
                                 </span>
-                                <label>Không</label>
+                                <label for="ck_sure_2">Không</label>
                             </div>
                         </div>
                     </div>
@@ -72,17 +76,17 @@
                         <div class="checked_content">
                             <div class="item">
                                 <span class="box_check_mark">
-                                    <input type="radio" name="ck_by" checked/>
+                                    <input type="radio" name="ck_by" id="ck_by_1" checked/>
                                     <i>&nbsp;</i>
                                 </span>
-                                <label>Tự túc</label>
+                                <label for="ck_by_1">Tự túc</label>
                             </div>
                             <div class="item">
                                 <span class="box_check_mark">
-                                    <input type="radio" name="ck_by"/>
+                                    <input type="radio" id="ck_by_2" name="ck_by"/>
                                     <i>&nbsp;</i>
                                 </span>
-                                <label>Đi xe chung</label>
+                                <label for="ck_by_2">Đi xe chung</label>
                             </div>
                         </div>
                     </div>
@@ -92,7 +96,12 @@
                             <input class="count_input" type="text"/>
                         </div>
                     </div>
-
+                    <div class="row_form">
+                        <label class="lb_form"></label>
+                        <div class="checked_content">
+                            <button class="btn_submit" type="submit">xác nhận</button>
+                        </div>
+                    </div>
 
                 </form>
             </div>

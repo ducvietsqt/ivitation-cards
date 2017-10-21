@@ -11,7 +11,7 @@ img {
 }
 
 .w_logo {
-  width: 70%;
+  width: 40%;
 }
 
 .w_title {
@@ -27,14 +27,22 @@ img {
   padding: 1rem 2rem;
   height: 100%;
 }
-
+.second_page {
+  //pointer-events: none;
+  &>div {
+    //height: 100% !important;
+  }
+}
 .card_info {
   //border: solid 1px red;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  padding: 2rem 0rem;
+  padding: 2rem 0rem 0rem 0rem;
+  .item {
+    width: 33.3333%;
+  }
   .left {
     text-align: center;
   }
@@ -47,14 +55,14 @@ img {
 }
 
 .fullname {
-  font-family: $font_Pacifico;
+
   color: #6d0e0f;
   font-size: 3rem;
   margin: 0rem;
 }
 
 .name_latin {
-  font-family: $font_roboto;
+
   color: #000000;
   margin: 0rem;
   font-size: 2rem;
@@ -63,7 +71,29 @@ img {
 
 .text-uppercase {
   text-transform: uppercase;
-  font-weight: bold;
+
+}
+
+.bold {
+  font-family: $font_BaiSauBold;
+}
+
+.doot_botom {
+
+  padding-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: '';
+    height: 1px;
+    border-bottom: dashed 1px #000;
+    width: 160%;
+    display: block;
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 p {
@@ -80,7 +110,25 @@ p {
 
 .form_content {
   border-top: solid 1px #745f68;
-  padding-top: 1rem;
+  padding-top: 0rem;
+}
+
+.info_restaurant {
+  margin-top: 2rem;
+  .name {
+    color: #c0187f;
+    font-size: 3rem;
+    font-family: $font_BaiSauBold;
+  }
+  .dress {
+
+    span {
+      color: #c0187f;
+    }
+  }
+  ._caption {
+    margin-bottom: -0.5rem;
+  }
 }
 
 .row_form {
@@ -91,8 +139,8 @@ p {
   .lb_form {
     width: 30%;
     font-size: 1.4rem;
-    font-weight: bold;
-    font-family: $font_roboto;
+    //font-weight: bold;
+    //font-family: $font_roboto;
     text-transform: uppercase;
     display: flex;
     align-content: center;
@@ -112,9 +160,23 @@ p {
     display: block;
     border: none;
     width: 100%;
-    height: 4rem;
+    height: 2.5rem;
     padding: 0rem 1.5rem;
   }
+}
+
+.btn_submit {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(99, 0, 0);
+  border-radius: 3px;
+  background-color: rgb(99, 0, 0);
+  //opacity: 0.75;
+  width: 150px;
+  height: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 .box_check_mark {
@@ -158,6 +220,7 @@ p {
   //left: 50%;
   //transform: translate(-50%, 0%);
 }
+
 #magazine .turn-page.first_page {
   background-color: rgb(249, 203, 223);
   display: flex;
@@ -170,27 +233,34 @@ p {
   -ms-box-shadow: 0 4px 10px #666;
   -o-box-shadow: 0 4px 10px #666;
   box-shadow: 0 4px 10px #666;
+  overflow: hidden;
   img {
     display: block;
     margin-bottom: 2rem;
   }
+  &:after {
+
+  }
 }
+
 * {
   outline: none;
 }
 
 #heart {
   position: absolute;
-  right: 2rem;
+  right: 0rem;
   bottom: 0rem;
   cursor: pointer;
   display: block;
   width: 100px;
   height: 90px;
   animation: heartbeat 1s infinite;
-  margin:0 auto;
+  margin: 0 auto;
+  opacity: 0;
 
 }
+
 #heart:before,
 #heart:after {
   position: absolute;
@@ -213,6 +283,7 @@ p {
   -o-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
+
 #heart:after {
   left: 0;
   -webkit-transform: rotate(45deg);
@@ -224,35 +295,26 @@ p {
   -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
   -o-transform-origin: 100% 100%;
-  transform-origin :100% 100%;
+  transform-origin: 100% 100%;
 }
 
-
-
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
   }
-  20%
-  {
-    transform: scale( 1 );
+  20% {
+    transform: scale(1);
   }
-  40%
-  {
-    transform: scale( .75 );
+  40% {
+    transform: scale(.75);
   }
-  60%
-  {
-    transform: scale( 1 );
+  60% {
+    transform: scale(1);
   }
-  80%
-  {
-    transform: scale( .75 );
+  80% {
+    transform: scale(.75);
   }
-  100%
-  {
-    transform: scale( .75 );
+  100% {
+    transform: scale(.75);
   }
 }
