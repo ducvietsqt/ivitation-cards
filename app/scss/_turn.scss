@@ -27,12 +27,14 @@ img {
   padding: 1rem 2rem;
   height: 100%;
 }
+
 .second_page {
   //pointer-events: none;
-  &>div {
+  & > div {
     //height: 100% !important;
   }
 }
+
 .card_info {
   //border: solid 1px red;
   display: flex;
@@ -251,22 +253,40 @@ p {
   -o-box-shadow: 0 4px 10px #666;
   box-shadow: 0 4px 10px #666;
   overflow: hidden;
+  perspective: 800px;
   img {
     display: block;
     margin-bottom: 2rem;
   }
   &:after {
-    content: '';
+    //content: '';
     display: block;
     width: 20rem;
     height: 20rem;
     position: absolute;
-    bottom: 0rem;
-    right: 0rem;
+    top: 0rem;
+    left: 0rem;
     z-index: 9;
     //border: solid 1px red;
-    transform: perspective(600px) rotateY(0deg);
+    //background-image: -webkit-gradient(linear, 100% 100%, 94.8429% 96.2428%, color-stop(0.8, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+    background: red;
+    transform: rotate3d(0, 1, 0, -3deg);
+    backface-visibility: visible;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+
   }
+}
+
+#magazine .turn-page.first_page {
+
+}
+
+#magazine .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px;
 }
 
 * {
@@ -283,14 +303,14 @@ p {
   height: 90px;
   animation: heartbeat 1s infinite;
   margin: 0 auto;
-  opacity: 0;
+  //opacity: 0;
 
 }
 
 #heart:before,
 #heart:after {
   position: absolute;
-  content: "";
+  //content: "";
   left: 50px;
   top: 0;
   width: 50px;

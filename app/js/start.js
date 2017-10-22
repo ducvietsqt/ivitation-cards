@@ -1,21 +1,22 @@
-const PAGE = 2;
-const DISPLAY = {SINGLE:'single', DOUBLE: 'double'}; // todo: ex: 'single','double';
-
+let PAGE = 1;
+let DISPLAY = {SINGLE:'single', DOUBLE: 'double'}; // todo: ex: 'single','double';
+let DURATION = 1000;
 $(window).ready(function () {
     let _MOBILE = isMobile.any();
     let _display = _MOBILE ? DISPLAY.SINGLE : DISPLAY.DOUBLE;
     let _TURNER = $('#magazine');
     _TURNER.turn({
         display: _display,
-        acceleration: false,
+        acceleration: true,
         gradients: true,
         elevation: 50,
         page: PAGE,
         autoCenter: true,
         width: $(window).width(),
         height: $(window).height(),
-        turnCorners: 'bl,tr',
-        duration: 1000,
+        // turnCorners: 'bl,tr',
+
+        duration: DURATION,
         when: {
             turned: function (e, page) {
             }
@@ -24,6 +25,7 @@ $(window).ready(function () {
     $('#heart').bind('click', function (e) {
         _TURNER.turn('next');
     });
+    _TURNER.turn("peel", "r");
     window.addEventListener("orientationchange", function() {
         _TURNER.turn("size", $(window).width(), $(window).height());
     }, false);
