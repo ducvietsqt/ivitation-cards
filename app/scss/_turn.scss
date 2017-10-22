@@ -120,6 +120,12 @@ p {
     color: #c0187f;
     font-size: 3rem;
     font-family: $font_BaiSauBold;
+    @media (max-width: 767px) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: 320px) {
+      font-size: 1.8rem;
+    }
   }
   .dress {
 
@@ -128,7 +134,7 @@ p {
     }
   }
   ._caption {
-    margin-bottom: -0.5rem;
+    //margin-bottom: -0.5rem;
   }
 }
 
@@ -137,6 +143,9 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0rem;
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
   .lb_form {
     width: 30%;
     font-size: 1.4rem;
@@ -146,14 +155,21 @@ p {
     display: flex;
     align-content: center;
     align-items: center;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
   .checked_content {
     flex: 1;
     display: flex;
     align-content: center;
     align-items: center;
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
     .item {
-      width: 33%;
+      width: 50%;
       //border: solid 1px red;
     }
   }
@@ -240,7 +256,16 @@ p {
     margin-bottom: 2rem;
   }
   &:after {
-
+    content: '';
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    z-index: 9;
+    border: solid 1px red;
+    transform: perspective(600px) rotateY(0deg);
   }
 }
 
