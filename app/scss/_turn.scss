@@ -80,9 +80,10 @@ img {
 
 .doot_botom {
 
-  padding-bottom: 2rem;
+  padding-bottom: .5rem;
   position: relative;
   display: inline-block;
+  color: #c0187f;
   &:after {
     content: '';
     height: 1px;
@@ -152,7 +153,7 @@ p {
     align-content: center;
     align-items: center;
     .item {
-      width: 30%;
+      width: 33%;
       //border: solid 1px red;
     }
   }
